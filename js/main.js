@@ -9,4 +9,7 @@ $(function(){
 		$('.header__menu').toggleClass('header__menu--active');
 	});
 
+	$('.trims__item-top').on('click', function () {
+		$(this).parent().toggleClass('trims__item--active');
+	});
 });
