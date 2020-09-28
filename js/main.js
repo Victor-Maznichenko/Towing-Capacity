@@ -10,6 +10,7 @@ $(function(){
 	});
 
 	$('.trims__item-top').on('click', function () {
-		$(this).parent().toggleClass('trims__item--active');
+		$(this).toggleClass('trims__item-top--active');
+		$(this).siblings().slideToggle('slow');
 	});
 });

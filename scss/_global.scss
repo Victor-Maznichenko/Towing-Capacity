@@ -78,17 +78,15 @@ body {
 		border-radius: 6px;
 		bottom: 0;
 		right: 0;
-		z-index: 3;
 	}
 	img{
 		position: inherit;
-		z-index: 7;
+		z-index: 1;
 		border-radius: 6px;
 	}
 }
 .block-shadow{
 	position: relative;
-	z-index: 10;
 	padding: 0 10px 10px 0;
 	&::after{
 		content: '';
@@ -97,7 +95,6 @@ body {
 		border: 1px solid #419EF4;
 		bottom: 0;
 		right: 0;
-		z-index: 4;
 		box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
 		border-radius: 6px;
 		height: calc(100% - 15px);

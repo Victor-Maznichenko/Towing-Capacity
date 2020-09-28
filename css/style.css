@@ -101,18 +101,16 @@ body {
   border-radius: 6px;
   bottom: 0;
   right: 0;
-  z-index: 3;
 }
 
 .img-shadow img {
   position: inherit;
-  z-index: 7;
+  z-index: 1;
   border-radius: 6px;
 }
 
 .block-shadow {
   position: relative;
-  z-index: 10;
   padding: 0 10px 10px 0;
 }
 
@@ -123,7 +121,6 @@ body {
   border: 1px solid #419EF4;
   bottom: 0;
   right: 0;
-  z-index: 4;
   -webkit-box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
           box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
@@ -291,6 +288,11 @@ body {
   font-size: 18px;
   line-height: 22px;
   color: #1D1D1D;
+  max-height: 45px;
+}
+
+.header .selectize-input {
+  padding: 14px 8px;
   height: 45px;
 }
 
@@ -394,6 +396,11 @@ body {
   overflow-x: hidden;
 }
 
+.header__menu-link {
+  color: #fff;
+  display: block;
+}
+
 .header-social {
   position: absolute;
   bottom: 65px;
@@ -467,6 +474,9 @@ body {
   border: 1px solid #419EF4;
   border-radius: 6px;
   z-index: 4;
+  font-weight: 700;
+  line-height: 170%;
+  letter-spacing: 0.04em;
 }
 
 .select__table {
@@ -597,10 +607,33 @@ body {
 }
 
 .terminology__items {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 60px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-bottom: 20px;
+}
+
+.terminology__item {
+  margin-top: 60px;
+  margin-right: 45px;
+  max-width: calc(100%/3 - 45px);
+  width: 100%;
+}
+
+.terminology__item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.terminology__item:nth-child(-n + 3) {
+  margin-top: 0;
 }
 
 .terminology__item-title {
@@ -636,13 +669,28 @@ body {
 }
 
 .trailers__items {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .trailers__item {
   padding: 0 10px 10px 0;
+  max-width: calc(100%/3 - 10px);
+  width: 100%;
+  margin-top: 20px;
+}
+
+.trailers__item:nth-child(-n + 3) {
+  margin-top: 0;
 }
 
 .trailers__item-inner {
@@ -831,9 +879,26 @@ body {
 }
 
 .catalog__items {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.catalog__item {
+  max-width: calc(100%/3 - 10px);
+  margin: 20px 20px 0 0;
+}
+
+.catalog__item:nth-child(-n + 3) {
+  margin-top: 0;
 }
 
 .catalog__item-inner {
@@ -897,6 +962,10 @@ body {
   margin-bottom: 30px;
 }
 
+.trims__item + .trims__item {
+  margin-top: 10px;
+}
+
 .trims__item-name {
   line-height: 170%;
   font-weight: 700;
@@ -904,15 +973,15 @@ body {
 
 .trims__item-wrap {
   position: relative;
+  border-radius: 6px;
+  border: 1px solid #419EF4;
   z-index: 10;
   background-color: #fff;
 }
 
 .trims__item-top {
   cursor: pointer;
-  border: 1px solid #419EF4;
   padding: 12px 0 12px 30px;
-  border-radius: 6px;
   position: relative;
 }
 
@@ -935,13 +1004,27 @@ body {
   transition: all .3s;
 }
 
-.trims__item--active .trims__item-top::after {
+.trims__item-top--active::after {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
 .trims__item-dropdown {
-  padding: 5px 70px 70px 40px;
-  height: 0;
+  padding: 5px 70px 40px 80px;
+  font-size: 14px;
+  line-height: 18px;
+  display: none;
+}
+
+.trims-dropdown__title {
+  margin-bottom: 5px;
+}
+
+.trims-dropdown__text + .trims-dropdown__text {
+  margin-top: 45px;
+}
+
+.trims-dropdown__block + .trims-dropdown__block {
+  margin-top: 15px;
 }
