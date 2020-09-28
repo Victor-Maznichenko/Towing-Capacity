@@ -326,7 +326,6 @@
 	}
 }
 .terminology{
-	background: linear-gradient(182.4deg, #2D9AFF -1.3%, #91CAFF 123.67%);
 	padding: 75px 0 45px;
 	color: #fff;
 	&__inner{
@@ -556,6 +555,9 @@
 			margin-top: 0;
 		}
 	}
+	&__item-info{
+		padding: 0 20px;
+	}
 	&__item-inner{
 		background: #fff;
 		position: relative;
@@ -578,21 +580,33 @@
 		text-align: left;
 	}
 }
-.about-header{
+.header-black{
 	color: #454545;
 	padding-bottom: 75px;
 	background-color: #fff;
-	&__main{
+	.header__main{
 		display: flex;
 		justify-content: space-between;
 	}
-	&__title{
+	.header__main__title{
 		max-width: 450px;
-		font-size: 38px;
-		line-height: 46px;
+		margin-bottom: 30px;
 	}
-	&__top{
+	.header__main-description{
+		color: rgba(#454545, .3);
+		text-shadow: none;
+	}
+	.header__top{
 		margin-bottom: 35px;
+	}
+	.header__menu-btn span{
+		background-color: #000;
+	}
+	.header__menu-title{
+		color: #363030;
+	}
+	.header-social__link:hover{
+
 	}
 }
 .header__main-img{
@@ -659,8 +673,33 @@
 		margin-top: 15px;
 	}
 }
-
-
+.about-note{
+	background-position: right 220px top 20px;
+	padding-bottom: 95px;
+	&__title{
+		max-width: 700px;
+		color: rgba(#454545, .3);
+		margin-bottom: 20px;
+		text-shadow: 0px 4px 15px #F6F7FA;
+	}
+	&__text{
+		max-width: 670px;
+	}
+}
+.warning{
+	padding: 70px 0;
+	&__description{
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		line-height: 170%;
+		color: #fff;
+		margin-bottom: 20px;
+	}
+	&__title{
+		color: #fff;
+		max-width: 100%;
+	}
+}
 
 
 
