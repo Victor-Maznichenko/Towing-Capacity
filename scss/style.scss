@@ -10,12 +10,11 @@
 	color: #FFFFFF;
 	position: relative;
 	padding-bottom: 100px;
-	background-position: center top;
+	background-position: right top;
 	&__top{
 		margin-bottom: 40px;
 		display: flex;
 		padding: 28px 0;
-		margin-bottom: 10px;
 		align-items: center;
 		justify-content: space-between;
 	}
@@ -146,7 +145,6 @@
 	}
 	.catalog-header__title{
 		max-width: 575px;
-		margin-top: 105px;
 	}
 	&__main-description{
 		text-shadow: 9px 9px 15px rgba(0, 0, 0, 0.25);
@@ -296,6 +294,7 @@
 		display: flex;
 		justify-content: space-between;
 		position: relative;
+		align-items: center;
 		width: 100%;
 	}
 	&-table__line{
@@ -440,15 +439,16 @@
 }
 .note{
 	padding-bottom: 60px;
-	background-repeat: no-repeat;
-	background-size: auto;
-	background-position: right 190px top;
 	&__inner{
 		display: flex;
 		justify-content: flex-start;
+		background-size: auto;
+		background-position: right top;
+		margin-right: -35px;
+		background-repeat: no-repeat;
 	}
 	&__info{
-		padding: 20px 0;
+		padding: 25px 0;
 	}
 	&__info-title{
 		margin-bottom: 25px;
@@ -462,6 +462,10 @@
 		p+p{
 			margin-top: 25px;
 		}
+	}
+	&__img{
+		display: none;
+		width: 100%;
 	}
 }
 .usefulness{
@@ -546,11 +550,13 @@
 		display: flex;
 		align-items: stretch;
 		flex-wrap: wrap;
-		justify-content: flex-start;
+		justify-content: space-between;
 	}
 	&__item{
 		max-width: calc(100%/3 - 10px);
-		margin: 20px 20px 0 0;
+		margin-top: 20px;
+		display: block;
+		width: 100%;
 		&:nth-child(-n + 3){
 			margin-top: 0;
 		}
@@ -571,6 +577,7 @@
 	&__item-img{
 		margin-bottom: 30px;
 		display: inline-block;
+		width: 100%;
 	}
 	&__item-title{
 		margin-bottom: 10px;
@@ -580,6 +587,9 @@
 		text-align: left;
 	}
 }
+.header-catalog__top{
+	margin-bottom: 105px;
+}
 .header-black{
 	color: #454545;
 	padding-bottom: 75px;
@@ -588,9 +598,17 @@
 		display: flex;
 		justify-content: space-between;
 	}
-	.header__main__title{
+	.header__main-title{
 		max-width: 450px;
 		margin-bottom: 30px;
+		font-weight: 700;
+		font-size: 38px;
+		line-height: 46px;
+		color: #363030;
+		text-shadow: none;
+	}
+	.header__main-info{
+		padding-top: 80px;
 	}
 	.header__main-description{
 		color: rgba(#454545, .3);
@@ -673,9 +691,12 @@
 		margin-top: 15px;
 	}
 }
-.about-note{
+.note-black{
 	background-position: right 220px top 20px;
 	padding-bottom: 95px;
+	.note__info{
+		padding: 0 0 20px;
+	}
 	&__title{
 		max-width: 700px;
 		color: rgba(#454545, .3);
@@ -700,11 +721,39 @@
 		max-width: 100%;
 	}
 }
-
-
-
-
-
+.slider{
+	padding: 75px 0 55px;
+	&__title{
+		margin-bottom: 25px;
+	}
+	&__description{
+		margin-bottom: 25px;
+	}
+}
+.swiper-container{
+	.catalog__item{
+		max-width: 320px;		
+	}
+}
+.swiper-wrapper{
+	margin-bottom: 50px;
+}
+.swiper-slide{
+	width: 100%;
+	max-width: 320px;
+}
+.swiper-slide:empty{
+  background: red;
+  min-height: 50px;
+  max-width: calc((100vw - 1000px)/2);
+  width: 100%;
+}
+.swiper-container-horizontal>.swiper-pagination-progressbar, .swiper-container-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{
+	top: unset;
+	left: calc((100vw - 1000px)/2);
+ 	max-width: 1000px;
+	bottom: 0;
+}
 
 
 
