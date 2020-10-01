@@ -18,8 +18,8 @@ $(function(){
 });
 
 var swiper = new Swiper('.swiper-container', {
-	loop: true,
 	slidesPerView: 'auto',
+	spaceBetween: 20,
 	pagination: {
 		el: '.swiper-pagination',
 		type: 'progressbar',
@@ -28,4 +28,10 @@ var swiper = new Swiper('.swiper-container', {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
+	breakpoints: {
+        1001: {
+            slidesPerView: 2,
+            spaceBetweenSlides: 10
+        },
+    }
 });

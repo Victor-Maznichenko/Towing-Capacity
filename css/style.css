@@ -995,6 +995,11 @@ body {
   color: #363030;
 }
 
+.header-black .header-social__link:hover {
+  -webkit-filter: drop-shadow(0 0 5px rgba(54, 48, 48, 0.7));
+          filter: drop-shadow(0 0 5px rgba(54, 48, 48, 0.7));
+}
+
 .header__main-img {
   margin-right: -55px;
 }
@@ -1014,6 +1019,7 @@ body {
 .trims__item-name {
   line-height: 170%;
   font-weight: 700;
+  padding-right: 40px;
 }
 
 .trims__item-wrap {
@@ -1123,6 +1129,11 @@ body {
   margin-bottom: 25px;
 }
 
+.swiper-container {
+  margin-left: calc((100vw - 1000px)/2);
+  margin-bottom: 80px;
+}
+
 .swiper-container .catalog__item {
   max-width: 320px;
 }
@@ -1145,9 +1156,19 @@ body {
 
 .swiper-container-horizontal > .swiper-pagination-progressbar, .swiper-container-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
   top: unset;
-  left: calc((100vw - 1000px)/2);
-  max-width: 1000px;
+  left: 0;
   bottom: 0;
+  max-width: calc((100vw - 1000px)/2 + 900px);
+}
+
+.slider__text {
+  max-width: 1100px;
+  margin-left: calc((100vw - 1000px)/2);
+}
+
+.slider__text a {
+  color: #419EF4;
+  font-weight: 700;
 }
 
 @media (max-width: 1280px) {
@@ -1277,6 +1298,21 @@ body {
     width: 100%;
     margin: 0 auto;
   }
+  .swiper-container {
+    max-width: 1215px;
+    width: 100%;
+    margin-left: 0;
+    padding: 0 15px;
+  }
+  .slider__text {
+    margin-left: 0;
+    padding: 0 15px;
+  }
+  .swiper-container-horizontal > .swiper-pagination-progressbar, .swiper-container-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+    left: 20px;
+    width: 100%;
+    max-width: calc(100% - 40px);
+  }
 }
 
 @media (max-width: 900px) {
@@ -1319,6 +1355,9 @@ body {
     background-image: url(../images/header-bg2-mobile.jpg) !important;
     background-position: right center;
   }
+  .trims__item-dropdown {
+    padding: 20px 35px 30px 25px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -1330,6 +1369,9 @@ body {
   }
   .catalog__item + .catalog__item {
     margin-top: 20px;
+  }
+  .trims__item-dropdown {
+    padding: 20px 35px 30px 15px;
   }
 }
 
@@ -1445,6 +1487,12 @@ body {
   .usefulness {
     padding: 35px 0 30px;
   }
+  .trims__item-name {
+    line-height: 100%;
+  }
+  .block-shadow {
+    padding: 0 7px 7px 0;
+  }
 }
 
 @media (max-width: 400px) {
@@ -1476,5 +1524,8 @@ body {
   }
   .usefulness__item + .usefulness__item {
     margin-top: 40px;
+  }
+  .swiper-container .catalog__item {
+    max-width: 300px;
   }
 }
